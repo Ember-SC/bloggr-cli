@@ -196,5 +196,5 @@ We'll do this in the same steps that Tom Dale's video did:
     </div>
     ```
 
-    Now, when you browse [localhost:4200/about](localhost:4200/about), you will see the about contents.
+    Now, when you browse [localhost:4200/about](http://localhost:4200/about), you will see the about contents.
 
