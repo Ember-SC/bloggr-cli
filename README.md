@@ -53,3 +53,42 @@ This will illustrate two advantages:
    refresh it.  And it's *fast!*
 1. Instead of long monolithic files, each piece of functionality goes into it's own file in the folder
    it "belongs to".  This makes large projects much easier to manage.
+
+### The Steps
+
+Here are the code "chunks" that the video had us work with:
+
+#### Initial Setup
+
+1.  Build the original [bloggr app](https://github.com/tildeio/bloggr-client).  You should have already done this.
+    If you haven't, you can clone it now:
+
+    ```
+    git clone git@github.com:tildeio/bloggr-client.git
+    ```
+
+1.  Create the new version of the blogger app in the Ember-CLI framework.  This was described in the above section
+    under the title *Preparation*.
+
+1.  Include the reference to the Twitter *bootstrap* CSS package by adding this line:
+
+    ```html
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
+    ```
+
+    to the header section of `app/index.html`.
+
+1.  Include references to the date/time formatting and markdown editing libraries in `app/index.html`:
+
+    ```html
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+    <script src="assets/app.js"></script> <!-- place above two lines before this line -->
+    ```
+
+1.  Verify everything is working by looking at the brower and observing "Welcome to EmberJS".
+
+#### Break down and organize the original two files, `index.html` and `js/app.js`, code chunk by code chunk:
+
+We'll do this i
+
