@@ -41,7 +41,7 @@ Fire Up the Ember server:
 ember server
 ```
 
-and use your favorite *recent* browser to http://localhost:4200
+and use your favorite *recent* browser to [http://localhost:4200](http://localhost:4200).  You should see "Welcome to Ember.js".
 
 ### Building the App
 
@@ -50,9 +50,28 @@ Now we're going to build the same app but within the Ember/Broccoli framework.
 This will illustrate two advantages:
 
 1. When you save any source file, the current browser page automatically refreshes; you don't have to manually
-   refresh it.  And it's *fast!*
+   refresh it.  Try this: in `app/templates/application.hbs`:
+
+   ```html
+   <h2 id='title'>Welcome to Ember.js</h2>
+
+   {{outlet}}
+   ```
+
+   to
+
+   ```html
+   <h2 id='title'>Welcome to Ember.js</h2>
+
+   Here are some changes, dude!
+
+   {{outlet}}
+   ```
+
+   See the browser on this page automatically update.
+
 1. Instead of long monolithic files, each piece of functionality goes into it's own file in the folder
-   it "belongs to".  This makes large projects much easier to manage.
+   it "belongs to".  This makes large projects much easier to manage.  We'll see this as we proceed.
 
 ### The Steps
 
@@ -86,9 +105,96 @@ Here are the code "chunks" that the video had us work with:
     <script src="assets/app.js"></script> <!-- place above two lines before this line -->
     ```
 
-1.  Verify everything is working by looking at the brower and observing "Welcome to EmberJS".
+1.  Verify everything is working by looking at the brower and observing "Welcome to EmberJS".  The new font should
+    be larger because of the *twitter bootstrap* formatting.
 
 #### Break down and organize the original two files, `index.html` and `js/app.js`, code chunk by code chunk:
 
-We'll do this i
+We'll do this in the same steps that Tom Dale's video did:
+
+1.  Replace the "Welcome to Ember.JS" with the menu bar HTML.  In `app/templates/application.hbs` replace
+
+    ```html
+    <h2 id='title'>Welcome to Ember.js</h2>
+
+    {{outlet}}
+    ```
+
+    with
+
+    ```html
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Bloggr</a>
+            <ul class="nav">
+                <li><a link="#">Posts</a></li>
+                <li><a link="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+
+    {{outlet}}
+    ```
+
+    You should see the nicely rendered menu bar for "Bloggr", "Posts", and "About".
+
+1.  Build the 'About' section.
+
+    In the `app/router.js` file, insert the 'about' route
+    into the `Router.map` function:
+
+    ```javascript
+    Router.map(function() {
+        this.resource('about');  <!-- INSERTED LINE HERE -->
+    });
+    ```
+
+    Create a new template, `app/templates/about.hbs` with the following contents:
+
+    ```html
+    <div class='about'>
+        <p>Yehuda Katz is a member of the <a href="http://emberjs.com">Ember.js</a>, <a href="http://rubyonrails.org">Ruby
+            on Rails</a>
+            and <a href="http://www.jquery.com">jQuery</a> Core Teams; he spends his daytime hours at the startup he
+            founded,
+            <a href="http://www.tilde.io">Tilde Inc.</a>.</p>
+
+        <p>Yehuda is co-author of best-selling <a href="http://affiliate.manning.com/idevaffiliate.php?id=485_176">jQuery in
+            Action</a> and
+            <a href="http://affiliate.manning.com/idevaffiliate.php?id=485_145">Rails 3 in Action</a>.</p>
+
+        <p>He spends most of his time hacking on open source—his main projects, along with others, like <a
+                href="https://github.com/wycats/thor">Thor</a>,
+            <a href="http://www.handlebarsjs.com">Handlebars</a> and <a href="https://github.com/carlhuda/janus">Janus</a>—or
+            traveling the world doing evangelism work.</p>
+
+        <p>He can be found on Twitter as <a href="http://www.twitter.com/wycats">@wycats</a>.</p>
+    </div>
+
+    <div class='about'>
+        <p>My name is Tom Dale. I helped create <a href="http://www.emberjs.com/">Ember.js</a>, a JavaScript framework that
+            brings sanity to the web.</p>
+
+        <p>In October of 2011, I co-founded <a href="http://www.tilde.io">Tilde</a> with Yehuda Katz, Leah Silber and Carl
+            Lerche.</p>
+
+        <p>In my spare time I run a cash-for-beer exchange program at many local San Francisco dive bars.</p>
+    </div>
+    ```
+
+    On `app/templates/appliation.hbs`, update the link to `about` to handlebars:
+
+    ```
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Bloggr</a>
+            <ul class="nav">
+                <li><a href="#">Posts</a></li>
+                <li>{{#link-to 'about'}}About{{/link-to}}</li>  <!-- <<<< HERE! -->
+            </ul>
+        </div>
+    </div>
+    ```
+
+    Now, when you browse [localhost:4200/about](localhost:4200/about), you will see the about contents.
 
