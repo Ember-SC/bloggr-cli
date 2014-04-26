@@ -16,6 +16,8 @@ This is the project to do this.
 
 ## How to Do the Exercise
 
+### Preparation
+
 Checkout `ember-cli`:
 
 ```bash
@@ -40,3 +42,14 @@ ember server
 ```
 
 and use your favorite *recent* browser to http://localhost:4200
+
+### Building the App
+
+Remember that we've already built the app following the video.
+Now we're going to build the same app but within the Ember/Broccoli framework.
+This will illustrate two advantages:
+
+1. When you save any source file, the current browser page automatically refreshes; you don't have to manually
+   refresh it.  And it's *fast!*
+1. Instead of long monolithic files, each piece of functionality goes into it's own file in the folder
+   it "belongs to".  This makes large projects much easier to manage.
