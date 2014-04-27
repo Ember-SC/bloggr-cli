@@ -2,6 +2,8 @@
 
 The EmberJS bloggr app implemented in the Ember-CLI environment
 
+**NOTE! This is an older branch than master and is being kept here temporarily for historical purposes.  It will be deleted soon.**
+
 ## Introduction
 
 Thie project is a follow-on for the [Ember-SC](http://www.meetup.com/Ember-SC/) group's
