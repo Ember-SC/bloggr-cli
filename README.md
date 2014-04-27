@@ -181,8 +181,11 @@ We'll do this in the same steps that Tom Dale's video did:
         <p>In my spare time I run a cash-for-beer exchange program at many local San Francisco dive bars.</p>
     </div>
     ```
+    Now, when you browse [localhost:4200/about](http://localhost:4200/about), you will see the about contents.
 
-    On `app/templates/appliation.hbs`, update the link to `about` to handlebars:
+1.  Enable clicking to get to the `About` page:
+
+    On `app/templates/appliation.hbs`, update the link to `About` to handlebars:
 
     ```
     <div class="navbar">
@@ -196,5 +199,20 @@ We'll do this in the same steps that Tom Dale's video did:
     </div>
     ```
 
-    Now, when you browse [localhost:4200/about](http://localhost:4200/about), you will see the about contents.
+1.  Enable `Posts` to work.
+
+    On `app/templates/appliation.hbs`, update the link to `Posts` to handlebars:
+
+    TODO
+
+    Add `Posts` route.
+
+    TODO
+
+    Add `Posts` template.
+
+    Now page renders but we have only a title, no list.
+
+    Add `Posts` fixtures.  Added to initializers.
+
 
