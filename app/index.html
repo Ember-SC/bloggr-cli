@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BloggrCli</title>
+    <title>BloggerCli</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,12 +12,15 @@
       document.write('<base href="' + ENV.rootURL + '" />');
     </script>
 
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="assets/app.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
     <script src="assets/app.js"></script>
   </head>
   <body>
     <script>
-      window.BloggrCli = require('bloggr-cli/app')['default'].create(ENV.APP);
+      window.BloggerCli = require('bloggr-cli/app')['default'].create(ENV.APP);
     </script>
   </body>
 </html>
