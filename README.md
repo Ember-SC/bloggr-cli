@@ -1,4 +1,4 @@
-# bloggr-client-cli
+# bloggr-cli
 
 The EmberJS bloggr app implemented in the Ember-CLI environment
 
