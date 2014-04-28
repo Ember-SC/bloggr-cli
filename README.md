@@ -30,8 +30,8 @@ npm link # make the files in ember-cli global.
 Create a new project using the `ember` command:
 
 ```bash
-ember new ../bloggr-client-cli # Build a new project in the same work directory as ember-cli
-cd ../bloggr-client-cli
+ember new ../bloggr-cli # Build a new project in the same work directory as ember-cli
+cd ../bloggr-cli
 npm link ../ember-cli # symlink to the global
 ```
 
@@ -42,6 +42,27 @@ ember server
 ```
 
 and use your favorite *recent* browser to [http://localhost:4200](http://localhost:4200).  You should see "Welcome to Ember.js".
+
+#### What if the Above Sequence Doesn't Work?
+
+Sometimes the latest revision of Ember-CLI doesn't "work"; this is typically due to a transient `npm` package version incompatibility.
+For this exercise you can use an older version of Ember-CLI.  In this case, recover by doing the following:
+
+```bash
+cd ..                       # or wherever your projects folder is
+rm -rf ember-cli
+git clone git@github.com:stefanpenner/ember-cli.git
+cd ember-cli
+git checkout -b origin/master db82f314192552f73977c633a99bc47ae99975aa   # A version of ember-cli that worked for the author
+npm link
+rm -rf ../bloggr-cli
+ember new ../bloggr-cli
+cd ../bloggr-cli
+npm link ../ember-cli
+ember server
+```
+
+Now you can continue with building the App in the next section.
 
 ### Building the App
 
