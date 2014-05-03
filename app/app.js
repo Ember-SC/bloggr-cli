@@ -11,3 +11,4 @@ var App = Ember.Application.extend({
 loadInitializers(App, 'bloggr-cli');
 
 export default App;
+
