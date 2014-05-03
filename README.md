@@ -64,6 +64,17 @@ ember server
 
 Now you can continue with building the App in the next section.
 
+## I Just Want to Run the Completed Application
+
+Go to the folder where you have your `ember-cli` project.  can clone the `bloggr-cli` application, then:
+
+```bash
+git clone git@github.com:oldfartdeveloper/bloggr-cli.git bloggr-cli-done
+cd bloggr-cli-done.git
+npm link ../ember-cli
+ember server
+```
+
 ### Building the App
 
 Remember that we've already built the app following the video.
