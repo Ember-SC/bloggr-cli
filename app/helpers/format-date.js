@@ -1,3 +1,3 @@
-registerBoundHelper Ember.Handlebars.makeBoundHelper(function(date) {
+export default Ember.Handlebars.makeBoundHelper(function(date) {
     return moment(date).fromNow();
 });
