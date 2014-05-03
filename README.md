@@ -234,6 +234,24 @@ We'll do this in the same steps that Tom Dale's video did:
 
     Now page renders but we have only a title, no list.
 
-    Add `Posts` fixtures.  Added to initializers.
+    Add `Posts` fixtures.  Added to initializers (TODO).
+
+    Add `Post` route to `app/router.js`
+
+    Now, when you click `Posts`, you see the list of 2 posts.  But when you click one, it complains that it doesn't have
+    a `post` template.
+
+    Add `Post` template to `app/templates.js`
+
+    Complains that it doesn't have a model for `post`
+
+    Provided `post` in `post` route.  When click on post in list, complains that `format-date` not found.
+
+    Provided `format-date` helper; complains about it not being able to find the propery `format-markdown` in the
+    post controller.
+
+    Provided `foemat-markdown` helper; comp
+
+
 
 
