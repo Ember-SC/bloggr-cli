@@ -1,6 +1,7 @@
 {{#if isEditing}}
     {{partial 'post/edit'}}
     <button {{action 'doneEditing'}}>Done</button>
+    <button {{action 'cancelEditing'}}>Cancel</button>
 {{else}}
     <button {{action 'edit'}}>Edit</button>
 {{/if}}
