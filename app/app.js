@@ -10,5 +10,7 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, 'bloggr-cli');
 
-export default App;
+//var App = Ember.Application.create();
+App.ApplicationAdapter = DS.FixtureAdapter;
 
+export default App;
