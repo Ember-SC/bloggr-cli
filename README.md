@@ -69,7 +69,7 @@ Now you can continue with building the App in the next section.
 `cd` into your folder where you do your projects, then:
 
 ```bash
-git clone git@github.com:oldfartdeveloper/bloggr-cli.git
+git clone git@github.com:Ember-SC/bloggr-cli.git
 cd bloggr-cli
 npm link ../ember-cli
 npm install
