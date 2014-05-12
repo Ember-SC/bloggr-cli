@@ -1,81 +1,69 @@
 # bloggr-cli
 
-The EmberJS bloggr app implemented in the Ember-CLI environment
+The EmberJS bloggr app implemented in the Ember-CLI environment.
 
 ## Introduction
 
-Thie project is a follow-on for the [Ember-SC](http://www.meetup.com/Ember-SC/) group's
+Thie project is for the [Ember-SC](http://www.meetup.com/Ember-SC/) group's
 [Hackfest at the Beach](http://www.meetup.com/Ember-SC/events/177022872/).
 
 The purpose of this hack-fest is to start with the [Bloggr](https://github.com/oldfartdeveloper/bloggr-client)
 project implemented by [Tilde](http://www.tilde.io/) developer Tom Dale.  We have built the app following along
 the [video](https://www.youtube.com/watch?feature=player_detailpage&v=1QHrlFlaXdI).
 
-Now the team wants to incorporate this 'completed' exercise into [Ember-CLI](https://github.com/stefanpenner/ember-cli).
-This is the project to do this.
+Furthermore the team has incorporated this 'completed' exercise into [Ember-CLI](https://github.com/stefanpenner/ember-cli).
+Presently [bloggr](https://github.com/Ember-SC/bloggr-cli) now uses the Ember **model** and **fixtures** to
+set up a client-only local store.
+
+At this time, we're now about to build the web backend in **Node.js**.
 
 ## How to Do the Exercise
 
 ### Preparation
 
-Checkout `ember-cli`:
+1.  Open a command line window and go to the directory where you keep your software projects.
+    Get a recent revision of `ember-cli` as follows.
 
-```bash
-cd work # or whatever your project directory is.
-git clone git@github.com:stefanpenner/ember-cli.git
-cd ember-cli
-npm link # make the files in ember-cli global.
-```
+1.  Browse [zip](https://github.com/stefanpenner/ember-cli/archive/v0.0.25.zip) or
+    [tar.gz](https://github.com/stefanpenner/ember-cli/archive/v0.0.25.tar.gz) to download the current
+    `ember-cli` source code project.
 
-Create a new project using the `ember` command:
+1.  Unzip or ungzip/untar what you just downloaded.  Then, to retrieve the needed Javasript libraries:
 
-```bash
-ember new ../bloggr-cli # Build a new project in the same work directory as ember-cli
-cd ../bloggr-cli
-npm link ../ember-cli # symlink to the global
-```
+    ```bash
+    npm link # make the files in ember-cli global.
+    ```
 
-Fire Up the Ember server:
+1.  Create a new project using the `ember` command:
 
-```bash
-ember server
-```
+    ```bash
+    ember new ../bloggr-cli # Build a new project in the same work directory as ember-cli
+    cd ../bloggr-cli
+    npm link ../ember-cli # symlink to the global
+    ```
 
-and use your favorite *recent* browser to [http://localhost:4200](http://localhost:4200).  You should see "Welcome to Ember.js".
+1.  Fire Up the Ember server:
 
-#### What if the Above Sequence Doesn't Work?
+    ```bash
+    ember server
+    ```
 
-Sometimes the latest revision of Ember-CLI doesn't "work"; this is typically due to a transient `npm` package version incompatibility.
-For this exercise you can use an older version of Ember-CLI.  In this case, recover by doing the following:
-
-```bash
-cd ..                       # or wherever your projects folder is
-rm -rf ember-cli
-git clone git@github.com:stefanpenner/ember-cli.git
-cd ember-cli
-git checkout -b origin/master db82f314192552f73977c633a99bc47ae99975aa   # A version of ember-cli that worked for the author
-npm link
-rm -rf ../bloggr-cli
-ember new ../bloggr-cli
-cd ../bloggr-cli
-npm link ../ember-cli
-ember server
-```
-
-Now you can continue with building the App in the next section.
+    and use your favorite *recent* browser to [http://localhost:4200](http://localhost:4200).  You should see "Welcome to Ember.js".
 
 #### I Just Want to Run the Completed Application
 
-`cd` into your folder where you do your projects, then:
+1.  Be sure you've installed `ember-cli` as described above.
 
-```bash
-git clone git@github.com:Ember-SC/bloggr-cli.git
-cd bloggr-cli
-npm link ../ember-cli
-npm install
-bower install
-ember server
-```
+1.  `cd` into your folder where you do your projects, then:
+
+    ```bash
+    git clone git@github.com:Ember-SC/bloggr-cli.git
+    cd bloggr-cli
+    npm link ../ember-cli
+    npm install
+    bower install
+    ember server
+    ```
 
 ### Building the App
 
