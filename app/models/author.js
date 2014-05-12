@@ -12,4 +12,4 @@ FIXTURES : [
     ]
 });
 
-export default Author
+export default Author;
