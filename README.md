@@ -2,6 +2,10 @@
 
 The EmberJS bloggr app implemented in the Ember-CLI environment.
 
+## NOTE
+
+This older version matches Ember-CLI version 24.  For the most recent Ember-CLI version, use the `master` branch.
+
 ## Introduction
 
 Thie project is for the [Ember-SC](http://www.meetup.com/Ember-SC/) group's
