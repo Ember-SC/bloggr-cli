@@ -7,10 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script>
-      window.ENV = {{ENV}};
-      document.write('<base href="' + ENV.rootURL + '" />');
-    </script>
+    {{BASE_TAG}}
 
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="assets/app.css">
@@ -20,7 +17,11 @@
   </head>
   <body>
     <script>
-      window.BloggerCli = require('bloggr-cli/app')['default'].create(ENV.APP);
+      window.ENV = {{ENV}};
+    </script>
+    <script src="assets/bloggr-cli.js"></script>
+    <script>
+      window.BloggrCli28 = require('bloggr-cli/app')['default'].create(ENV.APP);
     </script>
   </body>
 </html>

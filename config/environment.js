@@ -1,6 +1,7 @@
 module.exports = function(environment) {
   var ENV = {
-    rootURL: '/',
+    baseURL: '/',
+    locationType: 'auto',
     FEATURES: {
       // Here you can enable experimental features on an ember canary build
       // e.g. 'with-controller': true
@@ -13,6 +14,9 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    // LOG_MODULE_RESOLVER is needed for pre-1.6.0
+    ENV.LOG_MODULE_RESOLVER = true;
+
     ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     ENV.APP.LOG_MODULE_RESOLVER = true;
@@ -25,5 +29,5 @@ module.exports = function(environment) {
 
   }
 
-  return JSON.stringify(ENV); // Set in index.html
+  return ENV;
 };
