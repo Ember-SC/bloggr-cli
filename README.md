@@ -22,17 +22,15 @@ At this time, we're now about to build the web backend in **Node.js**.
 ### Preparation
 
 1.  Open a command line window and go to the directory where you keep your software projects.
-    Get a recent revision of `ember-cli` as follows.
-
-1.  Browse [zip](https://github.com/stefanpenner/ember-cli/archive/v0.0.25.zip) or
-    [tar.gz](https://github.com/stefanpenner/ember-cli/archive/v0.0.25.tar.gz) to download the current
-    `ember-cli` source code project.
-
-1.  Unzip or ungzip/untar what you just downloaded.  Then, to retrieve the needed Javasript libraries:
-
+    Get a recent revision of `ember-cli` as follows.  In a terminal in the folder where you build your javascript
+    projects:
+    
     ```bash
-    npm link # make the files in ember-cli global.
+    git clone git@github.com:stefanpenner/ember-cli.git
+    cd ember-cli
     ```
+    
+    This exercise assumes that you have downloaded version 0.0.28.
 
 1.  Create a new project using the `ember` command:
 
@@ -59,9 +57,8 @@ At this time, we're now about to build the web backend in **Node.js**.
     ```bash
     git clone git@github.com:Ember-SC/bloggr-cli.git
     cd bloggr-cli
-    npm link ../ember-cli
-    npm install
-    bower install
+    npm install ember-cli --save-dev
+    ember init
     ember server
     ```
 

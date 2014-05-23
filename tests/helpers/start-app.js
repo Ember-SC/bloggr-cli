@@ -1,3 +1,5 @@
+/* global require */
+
 var Application = require('bloggr-cli/app')['default'];
 var Router = require('bloggr-cli/router')['default'];
 
