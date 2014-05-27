@@ -22,22 +22,20 @@ At this time, we're now about to build the web backend in **Node.js**.
 ### Preparation
 
 1.  Open a command line window and go to the directory where you keep your software projects.
-    Get a recent revision of `ember-cli` as follows.  In a terminal in the folder where you build your javascript
-    projects:
+    Get a recent revision of `ember-cli` as follows.  In a terminal:
     
     ```bash
-    git clone git@github.com:stefanpenner/ember-cli.git
-    cd ember-cli
+    npm install -g ember-cli
     ```
     
     This exercise assumes that you have downloaded version 0.0.28.
 
-1.  Create a new project using the `ember` command:
+1.  Create a new project in the folder where you build your javascript projects using the `ember` command:
 
     ```bash
-    ember new ../bloggr-cli # Build a new project in the same work directory as ember-cli
-    cd ../bloggr-cli
-    npm link ../ember-cli # symlink to the global
+    ember new bloggr-cli
+    cd bloggr-cli
+    ember init
     ```
 
 1.  Fire Up the Ember server:
@@ -57,7 +55,7 @@ At this time, we're now about to build the web backend in **Node.js**.
     ```bash
     git clone git@github.com:Ember-SC/bloggr-cli.git
     cd bloggr-cli
-    npm install ember-cli --save-dev
+    npm install -g ember-cli
     ember init
     ember server
     ```
