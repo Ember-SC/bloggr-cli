@@ -48,8 +48,6 @@ At this time, we're now about to build the web backend in **Node.js**.
 
 #### I Just Want to Run the Completed Application
 
-1.  Be sure you've installed `ember-cli` as described above.
-
 1.  `cd` into your folder where you do your projects, then:
 
     ```bash
